@@ -49,3 +49,27 @@ This initial content covers the basics. More details about features, improvement
 *   `style.css`: Contains all the CSS rules for styling the page elements, including the simulation canvas, information display, and button.
 *   `script.js`: Holds all the JavaScript logic for the application. This includes setting up the Matter.js physics engine, creating the chain, handling user interactions (mouse/touch), integrating gyroscope data, and managing UI updates.
 *   `README.md`: This file, providing information about the project.
+
+## Deploying as a GitHub Pages Website
+
+This project is ready to be deployed as a GitHub Pages website. Follow these steps to make it live:
+
+1.  **Navigate to Repository Settings**:
+    *   Go to your repository on GitHub where these files are pushed.
+    *   Click on the "Settings" tab (usually near the top of the repository page).
+
+2.  **Configure GitHub Pages**:
+    *   In the left sidebar of the Settings page, click on "Pages" (under the "Code and automation" section).
+    *   Under the "Build and deployment" section:
+        *   For "Source", ensure "Deploy from a branch" is selected.
+        *   Under "Branch":
+            *   Select your main branch (commonly named `main`, `master`, or similar) from the dropdown.
+            *   Ensure the folder is set to `/ (root)`.
+        *   Click "Save".
+
+3.  **Access Your Live Site**:
+    *   After saving, GitHub will start building your page. This might take a minute or two.
+    *   Once deployed, the URL for your live site (e.g., `https://<your-username>.github.io/<repository-name>/`) will be displayed at the top of the GitHub Pages settings section.
+    *   You can then visit this URL to see your Physics Light Chain simulation live!
+
+**Note**: Since this project uses the Device Orientation API for gyroscope features, these specific features will only work if you access the live GitHub Pages website on a device that has motion sensors (like a smartphone or tablet) and if you grant the necessary permissions when prompted by the browser.
