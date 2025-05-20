@@ -1,0 +1,48 @@
+/* Basic styles for the HTML body element. */
+body {
+    margin: 0; /* Remove default margins. */
+    overflow: hidden; /* Prevent scrollbars, as content is managed by the canvas. */
+    background-color: #222; /* Dark background color for the page. */
+    font-family: sans-serif; /* Use a standard sans-serif font. */
+    color: #eee; /* Light text color for contrast against the dark background. */
+}
+
+/* Styles for the canvas element where the Matter.js simulation is rendered. */
+canvas {
+    display: block; /* Ensures the canvas behaves as a block-level element, preventing extra space below it. */
+}
+
+/* Styles for the div that displays sensor information and status messages. */
+#sensorInfo {
+    position: absolute; /* Positioned relative to the nearest positioned ancestor (body). */
+    top: 10px; /* 10 pixels from the top edge of the page. */
+    left: 10px; /* 10 pixels from the left edge of the page. */
+    background: rgba(0,0,0,0.5); /* Semi-transparent black background for readability. */
+    padding: 10px; /* Padding inside the div. */
+    border-radius: 5px; /* Rounded corners for a softer look. */
+    font-size: 12px; /* Small font size for the information text. */
+    max-width: calc(100% - 40px); /* Maximum width to prevent it from stretching full screen width, ensuring padding. */
+                                  /* The 40px accounts for left/right padding/margins if any, plus some breathing room. */
+}
+
+/* Styles for the button used to request motion sensor permissions. */
+#requestSensorButton {
+    padding: 15px 25px; /* Generous padding for a larger, touch-friendly button. */
+    font-size: 16px; /* Larger font size for the button text. */
+    cursor: pointer; /* Changes mouse cursor to a pointer on hover, indicating interactivity. */
+    position: absolute; /* Positioned relative to the body. */
+    top: 50%; /* Positioned 50% from the top of the page. */
+    left: 50%; /* Positioned 50% from the left of the page. */
+    transform: translate(-50%, -50%); /* Centers the button using translate, by shifting it back by half its own width/height. */
+    background-color: #4CAF50; /* Green background color. */
+    color: white; /* White text color. */
+    border: none; /* No border. */
+    border-radius: 8px; /* Rounded corners for the button. */
+    z-index: 10; /* Ensures the button is rendered on top of the canvas. */
+}
+
+/* Styles for the "Enable Motion Sensors" button when it is disabled. */
+ #requestSensorButton:disabled {
+    background-color: #aaa; /* Grey background color to indicate it's inactive. */
+    cursor: default; /* Default cursor (usually an arrow) to indicate it's not interactive. */
+}
